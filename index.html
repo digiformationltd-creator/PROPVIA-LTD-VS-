@@ -1,0 +1,4712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROPVIA SOLUTIONS LTD — Property & Business Consultancy</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CSS VARIABLES & THEME */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    :root {
+      --cream:       #FAF7F2;
+      --cream-mid:   #F0EBE1;
+      --cream-dark:  #E5DDD0;
+      --green:       #1A3C2E;
+      --green-mid:   #24523F;
+      --green-light: #2E6B52;
+      --gold:        #C9A84C;
+      --gold-light:  #E2C06A;
+      --black:       #0A0A0A;
+      --grey:        #6B7280;
+      --shadow:      0 8px 48px rgba(10,10,10,0.08);
+      --glow:        0 0 40px rgba(201,168,76,0.2);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* RESET & GLOBAL */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        cursor: none;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    button {
+      font-family: 'DM Sans', sans-serif;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* KEYFRAME ANIMATIONS */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @keyframes shimmerGold {
+      0%   { background-position: -200% center }
+      100% { background-position: 200% center }
+    }
+
+    @keyframes goldPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4) }
+      50%      { box-shadow: 0 0 0 10px rgba(201,168,76,0) }
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0) }
+      50%      { transform: translateY(-10px) }
+    }
+
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg) }
+      to   { transform: rotate(360deg) }
+    }
+
+    @keyframes rotateReverse {
+      from { transform: rotate(0deg) }
+      to   { transform: rotate(-360deg) }
+    }
+
+    @keyframes wordReveal {
+      from { opacity: 0; transform: translateY(20px) }
+      to   { opacity: 1; transform: translateY(0) }
+    }
+
+    @keyframes iconBounce {
+      0%, 100% { transform: translateY(0) scale(1) }
+      40%      { transform: translateY(-7px) scale(1.08) }
+      70%      { transform: translateY(-3px) scale(1.03) }
+    }
+
+    @keyframes drawLine {
+      from { width: 0; opacity: 0 }
+      to   { width: 100%; opacity: 1 }
+    }
+
+    @keyframes marqueeScroll {
+      from { transform: translateX(0) }
+      to   { transform: translateX(-50%) }
+    }
+
+    @keyframes cardEntrance {
+      from { opacity: 0; transform: scale(0.95) translateY(18px) }
+      to   { opacity: 1; transform: scale(1) translateY(0) }
+    }
+
+    @keyframes blobDrift {
+      0%, 100% { transform: translate(0, 0) scale(1) }
+      33%      { transform: translate(28px, -18px) scale(1.04) }
+      66%      { transform: translate(-18px, 24px) scale(0.97) }
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(24px) }
+      to   { opacity: 1; transform: translateY(0) }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9) }
+      to   { opacity: 1; transform: scale(1) }
+    }
+
+    @keyframes announcementFade {
+      0%   { opacity: 0 }
+      10%  { opacity: 1 }
+      85%  { opacity: 1 }
+      100% { opacity: 0 }
+    }
+
+    @keyframes slideInMenu {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SCROLL REVEAL */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+    .d5 { transition-delay: 0.5s; }
+    .d6 { transition-delay: 0.6s; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* GLASS CARD */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .glass-card {
+      background: rgba(250,247,242,0.75);
+      border: 1px solid rgba(201,168,76,0.22);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(201,168,76,0.5);
+      box-shadow: var(--shadow), var(--glow);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ANNOUNCEMENT BAR */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #announcementBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      background: var(--green);
+      color: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    #announcementBar .close-btn {
+      position: absolute;
+      right: 12px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #announcementText {
+      text-align: center;
+      animation: announcementFade 4s ease-in-out infinite;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* HEADER */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    header {
+      position: fixed;
+      top: 44px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 999;
+      transition: box-shadow 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    header.scrolled {
+      border-bottom: 1px solid var(--cream-dark);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+    }
+
+    #siteLogo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-fallback {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--gold);
+      display: none;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* DESKTOP NAV */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .nav-desktop {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--black);
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform-origin: left;
+      animation: drawLine 0.3s ease;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--green);
+    }
+
+    .nav-link:hover::after {
+      opacity: 1;
+    }
+
+    .nav-link.active {
+      color: var(--green);
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+      opacity: 1;
+    }
+
+    @media (max-width: 767px) {
+      .nav-desktop {
+        display: none;
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CTA BUTTON */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .cta-btn {
+      background: var(--green);
+      color: var(--cream);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+      animation: shimmerGold 1s ease-in-out;
+    }
+
+    .cta-btn:hover {
+      background: var(--green-mid);
+    }
+
+    @media (max-width: 767px) {
+      .cta-btn {
+        display: none;
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* HAMBURGER MENU */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .hamburger-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--green);
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    @media (max-width: 767px) {
+      .hamburger-btn {
+        display: flex;
+      }
+
+      header {
+        padding: 0 20px;
+        height: 64px;
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* MOBILE MENU OVERLAY */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #mobileMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--cream);
+      z-index: 998;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    #mobileMenu.active {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--green);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+      animation: slideInMenu 0.35s ease;
+    }
+
+    .mobile-menu-links a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--green);
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu-links a:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu-footer {
+      position: absolute;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+    }
+
+    .mobile-menu-footer div {
+      margin: 8px 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* MAIN CONTENT */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    main {
+      margin-top: 124px;
+      min-height: calc(100vh - 124px);
+    }
+
+    @media (max-width: 767px) {
+      main {
+        margin-top: 108px;
+        margin-bottom: 64px;
+        min-height: calc(100vh - 172px);
+      }
+    }
+
+    .page {
+      width: 100%;
+      display: block;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* FOOTER */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    footer {
+      background: var(--green);
+      color: var(--cream);
+      padding: 60px 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 20px;
+      }
+
+      footer {
+        padding: 40px 20px;
+      }
+    }
+
+    .footer-col h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .footer-logo {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(2);
+      margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .footer-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-dark);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .footer-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-mid);
+      display: block;
+      margin-bottom: 12px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact-item {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-mid);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .footer-whatsapp-btn {
+      width: 100%;
+      height: 44px;
+      background: var(--gold);
+      color: var(--green);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 60px 0;
+      max-width: 1200px;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(250,247,242,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-size: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-icon:hover {
+      background: var(--gold);
+      color: var(--green);
+      border-color: var(--gold);
+    }
+
+    .social-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      color: var(--cream-mid);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .footer-bottom {
+      background: var(--black);
+      padding: 16px;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    .footer-bottom a {
+      color: var(--grey);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* HOME PAGE — SECTION 1: HERO */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .hero-section {
+      min-height: 100vh;
+      background: var(--green);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 80px 40px;
+    }
+
+    @media (max-width: 767px) {
+      .hero-section {
+        padding: 40px 24px;
+        min-height: auto;
+      }
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    @media (min-width: 1025px) {
+      .hero-bg {
+        display: block;
+      }
+    }
+
+    .hero-bg-circle-1 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.06);
+      top: -200px;
+      right: -200px;
+      animation: rotateSlow 60s linear infinite;
+    }
+
+    .hero-bg-circle-2 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.04);
+      bottom: -150px;
+      left: -150px;
+      animation: rotateReverse 80s linear infinite;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hero-bg-blob-1 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      top: 50%;
+      right: -100px;
+      transform: translateY(-50%);
+      animation: blobDrift 20s infinite ease-in-out;
+      border-radius: 50%;
+    }
+
+    .hero-bg-blob-2 {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+      bottom: -80px;
+      left: -80px;
+      animation: blobDrift 28s infinite ease-in-out reverse;
+      border-radius: 50%;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px;
+      color: var(--cream);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-h1 {
+        font-size: 64px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-h1 {
+        font-size: 44px;
+      }
+    }
+
+    .word-reveal {
+      display: inline-block;
+      animation: wordReveal 0.5s ease both;
+    }
+
+    .gold-word {
+      color: var(--gold);
+    }
+
+    .hero-divider {
+      width: 80px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: var(--cream-mid);
+      line-height: 1.75;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons > * {
+        width: 100%;
+      }
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--green);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: goldPulse 2.5s infinite;
+      white-space: nowrap;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shimmerGold 1s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: scale(1.02);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1.5px solid var(--cream);
+      color: var(--cream);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-secondary:hover {
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    .btn-secondary-outline {
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-secondary-outline:hover {
+      background: var(--gold);
+      color: var(--green);
+    }
+
+    .btn-tertiary {
+      background: transparent;
+      border: 1.5px solid rgba(250,247,242,0.4);
+      color: var(--cream-mid);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn-tertiary:hover {
+      border-color: var(--cream);
+      color: var(--cream);
+    }
+
+    .hero-trust {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--cream-dark);
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px) {
+      .hero-trust {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-right {
+        display: none;
+      }
+    }
+
+    .hero-cards-container {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      transition: transform 0.3s ease-out;
+      transform-style: preserve-3d;
+    }
+
+    .hero-card {
+      position: absolute;
+      background: rgba(250,247,242,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      width: 100%;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .hero-card svg {
+      margin: 0 auto 16px;
+    }
+
+    .hero-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-dark);
+    }
+
+    .hero-card-1 {
+      animation: floatUpDown 3s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    .hero-card-2 {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      z-index: 2;
+      background: rgba(26,60,46,0.8);
+      border: 1px solid rgba(201,168,76,0.2);
+      animation: floatUpDown 3s ease-in-out infinite 0.6s;
+    }
+
+    .hero-card-3 {
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      z-index: 1;
+      background: var(--black);
+      border: none;
+      border-radius: 12px;
+      animation: floatUpDown 3s ease-in-out infinite 1.2s;
+    }
+
+    .card-shimmer {
+      height: 2px;
+      background: var(--gold);
+      margin: 16px 0;
+      animation: drawLine 0.3s ease;
+    }
+
+    .card-checks {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream);
+      margin-top: 12px;
+    }
+
+    .card-counter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      color: var(--gold);
+      font-weight: 600;
+      margin: 12px 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 2: TRUST MARQUEE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .trust-marquee {
+      background: var(--gold);
+      height: 52px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: relative;
+      mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-size: 100% 100%;
+    }
+
+    .marquee-content {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+      animation: marqueeScroll 30s linear infinite;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .marquee-content span {
+      display: inline-block;
+    }
+
+    .trust-marquee:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 3: COMPANY INTRODUCTION */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .company-intro {
+      background: var(--cream);
+      padding: 120px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .company-intro {
+        padding: 80px 24px;
+      }
+    }
+
+    .company-intro-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .company-intro-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .company-intro-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .eyebrow {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .section-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+      color: var(--green);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 1024px) {
+      .section-h2 {
+        font-size: 44px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-h2 {
+        font-size: 34px;
+      }
+    }
+
+    .section-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: var(--grey);
+      line-height: 1.75;
+    }
+
+    .section-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--green);
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .section-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .section-link:hover::after {
+      width: 100%;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-card {
+      padding: 28px;
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-card svg {
+      margin-bottom: 12px;
+    }
+
+    .stat-card .counter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin: 8px 0;
+    }
+
+    .stat-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--grey);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 4: PROPERTY SERVICES OVERVIEW */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .services-overview {
+      background: var(--green);
+      padding: 120px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .services-overview {
+        padding: 80px 24px;
+      }
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 80px;
+    }
+
+    .services-header .eyebrow {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .services-header .section-h2 {
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: var(--cream-mid);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      background: rgba(250,247,242,0.06);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 20px;
+      padding: 36px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(201,168,76,0.45);
+      box-shadow: 0 20px 64px rgba(10,10,10,0.3), var(--glow);
+    }
+
+    .service-icon-wrapper {
+      width: 72px;
+      height: 72px;
+      background: rgba(201,168,76,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon-wrapper {
+      animation: iconBounce 0.6s ease;
+    }
+
+    .service-icon-wrapper svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .service-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .service-divider {
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 16px;
+      animation: drawLine 0.4s ease;
+    }
+
+    .service-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--cream-dark);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-features li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-mid);
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .service-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .service-link:hover {
+      text-decoration: underline;
+      transform: translateX(4px);
+    }
+
+    .services-cta {
+      text-align: center;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 5: CONSULTANCY HIGHLIGHT */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .consultancy-highlight {
+      background: var(--cream);
+      padding: 120px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .consultancy-highlight {
+        padding: 80px 24px;
+      }
+    }
+
+    .consultancy-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .consultancy-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .consultancy-card {
+      background: var(--green);
+      border-radius: 24px;
+      padding: 48px;
+      border-left: 4px solid var(--gold);
+      text-align: center;
+    }
+
+    .consultancy-graphic {
+      margin: 0 auto 32px;
+      animation: floatUpDown 4s ease-in-out infinite;
+    }
+
+    .consultancy-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .consultancy-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--cream-mid);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .pill-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 767px) {
+      .pill-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pill-card {
+      background: rgba(250,247,242,0.7);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 18px 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pill-card:hover {
+      border-color: var(--gold);
+      background: var(--cream);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .pill-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .pill-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--green);
+      text-align: left;
+    }
+
+    .pill-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--grey);
+      text-align: left;
+      margin-top: 2px;
+    }
+
+    .pill-card svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 6: WHY CHOOSE US */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .why-choose {
+      background: var(--cream-mid);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .why-choose {
+        padding: 60px 24px;
+      }
+    }
+
+    .why-choose-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .why-choose-header .eyebrow {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .why-choose-header .section-h2 {
+      margin-bottom: 16px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .why-card {
+      padding: 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(201,168,76,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+
+    .why-card:hover .why-icon {
+      animation: iconBounce 0.6s ease;
+    }
+
+    .why-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .why-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.65;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 7: HOW WE WORK */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .how-we-work {
+      background: var(--green);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .how-we-work {
+        padding: 60px 24px;
+      }
+    }
+
+    .how-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 80px;
+    }
+
+    .how-header .section-h2 {
+      margin-bottom: 16px;
+    }
+
+    .steps-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      gap: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .steps-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+
+    .steps-line {
+      position: absolute;
+      top: 32px;
+      left: calc(12.5%);
+      width: 75%;
+      height: 2px;
+      background: repeating-linear-gradient(
+        to right,
+        var(--gold) 0 8px,
+        transparent 8px 16px
+      );
+      animation: drawLine 1.5s ease forwards;
+    }
+
+    @media (max-width: 1024px) {
+      .steps-line {
+        display: none;
+      }
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--gold);
+      background: transparent;
+    }
+
+    .step-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .step-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--cream-mid);
+      line-height: 1.65;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SECTION 8: FINAL CTA BANNER */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .final-cta {
+      background: var(--cream);
+      padding: 100px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 767px) {
+      .final-cta {
+        padding: 60px 24px;
+      }
+    }
+
+    .final-cta-bg {
+      position: absolute;
+      right: -200px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(26,60,46,0.06);
+      pointer-events: none;
+    }
+
+    .final-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-cta-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .final-cta-content h2 {
+        font-size: 40px;
+      }
+    }
+
+    .final-cta-content p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      color: var(--grey);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* INNER PAGES — SHARED STYLES */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .page-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 40px;
+    }
+
+    @media (max-width: 767px) {
+      .page-hero {
+        min-height: 40vh;
+        padding: 80px 24px;
+      }
+    }
+
+    .page-hero-green {
+      background: var(--green);
+    }
+
+    .page-hero-cream {
+      background: var(--cream);
+    }
+
+    .page-hero-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    }
+
+    .page-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      display: none;
+    }
+
+    @media (min-width: 1025px) {
+      .page-hero-bg {
+        display: block;
+      }
+    }
+
+    .page-hero-ring {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.05);
+      top: -100px;
+      right: -100px;
+      animation: rotateSlow 80s linear infinite;
+    }
+
+    .page-hero-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .page-hero-bg-cream {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .page-hero-circle-cream {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(26,60,46,0.06);
+      right: -150px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .page-hero-content {
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--cream-dark);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .page-hero-cream .breadcrumb {
+      color: var(--grey);
+    }
+
+    .breadcrumb span:first-child {
+      cursor: pointer;
+      color: var(--gold);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb span:first-child:hover {
+      color: var(--gold-light);
+    }
+
+    .page-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      color: var(--cream);
+      font-weight: 600;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .page-hero-cream .page-h1 {
+      color: var(--green);
+    }
+
+    @media (max-width: 767px) {
+      .page-h1 {
+        font-size: 48px;
+      }
+    }
+
+    .page-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      color: var(--cream-mid);
+      line-height: 1.75;
+      max-width: 640px;
+      margin: 16px auto 0;
+    }
+
+    .page-hero-cream .page-sub {
+      color: var(--grey);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* PROPERTY SERVICES PAGE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .services-page-grid {
+      background: var(--cream);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .services-page-grid {
+        padding: 60px 24px;
+      }
+    }
+
+    .services-page-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .services-page-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-page-card {
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+      border-top: 4px solid var(--green);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      animation: cardEntrance 0.6s ease both;
+    }
+
+    .service-page-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 64px rgba(10,10,10,0.12), var(--glow);
+      border-top-color: var(--gold);
+    }
+
+    .service-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .service-card-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(26,60,46,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-card-icon svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .service-card-cta {
+      background: var(--green);
+      color: var(--cream);
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .service-card-cta:hover {
+      background: var(--green-mid);
+      transform: translateY(-2px);
+    }
+
+    .service-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+
+    .service-card-divider {
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 16px;
+      animation: drawLine 0.4s ease;
+    }
+
+    .service-card-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--grey);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .service-card-features {
+      list-style: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    .service-card-features li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .service-card-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* PAGE BOTTOM CTA */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .page-bottom-cta {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .page-bottom-cta {
+        padding: 60px 24px;
+      }
+    }
+
+    .page-bottom-cta-green {
+      background: var(--green);
+    }
+
+    .page-bottom-cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .page-bottom-cta p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--cream-mid);
+      margin-bottom: 32px;
+    }
+
+    .page-bottom-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      .page-bottom-buttons {
+        flex-direction: column;
+      }
+
+      .page-bottom-buttons > * {
+        width: 100%;
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CONSULTANCY PAGE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .consultancy-compliance {
+      background: var(--cream);
+      padding: 40px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .consultancy-compliance {
+        padding: 40px 24px;
+      }
+    }
+
+    .compliance-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(201,168,76,0.08);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    .consultancy-cards-section {
+      background: var(--cream-mid);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .consultancy-cards-section {
+        padding: 60px 24px;
+      }
+    }
+
+    .consultancy-cards-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .consultancy-cards-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .consultancy-cards-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .consultancy-card {
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+      border-left: 3px solid var(--gold);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      animation: cardEntrance 0.6s ease both;
+    }
+
+    .consultancy-card:hover {
+      transform: translateY(-6px);
+      border-left-color: var(--green);
+      box-shadow: 0 20px 48px rgba(10,10,10,0.12);
+    }
+
+    .consultancy-card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(26,60,46,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .consultancy-card:hover .consultancy-card-icon {
+      animation: iconBounce 0.6s ease;
+    }
+
+    .consultancy-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .consultancy-card-divider {
+      height: 2px;
+      background: var(--gold);
+      margin: 12px 0 16px;
+      animation: drawLine 0.4s ease;
+    }
+
+    .consultancy-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .consultancy-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .consultancy-link:hover {
+      text-decoration: underline;
+      transform: translateX(2px);
+    }
+
+    .consultancy-why {
+      background: var(--green);
+      padding: 80px 80px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .consultancy-why {
+        padding: 60px 24px;
+      }
+    }
+
+    .consultancy-why h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+      color: var(--cream);
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .consultancy-why h2 {
+        font-size: 44px;
+      }
+    }
+
+    .consultancy-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .consultancy-why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .consultancy-why-card {
+      text-align: center;
+    }
+
+    .consultancy-why-card svg {
+      margin: 0 auto 16px;
+    }
+
+    .consultancy-why-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .consultancy-why-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--cream-mid);
+      line-height: 1.65;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ABOUT PAGE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .about-mission {
+      background: var(--cream);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .about-mission {
+        padding: 60px 24px;
+      }
+    }
+
+    .about-mission-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .about-mission-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .about-mission-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-what-we-do {
+      background: var(--green);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .about-what-we-do {
+        padding: 60px 24px;
+      }
+    }
+
+    .about-what-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .about-what-header .section-h2 {
+      margin-bottom: 16px;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-pillar-card {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .pillar-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .about-pillar-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .about-pillar-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--cream-dark);
+      line-height: 1.7;
+    }
+
+    .about-details {
+      background: var(--cream);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .about-details {
+        padding: 60px 24px;
+      }
+    }
+
+    .details-card {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .details-divider {
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 32px;
+      animation: drawLine 0.6s ease;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 32px;
+      text-align: left;
+    }
+
+    @media (max-width: 640px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .detail-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .detail-value {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .about-values {
+      background: var(--cream-mid);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .about-values {
+        padding: 60px 24px;
+      }
+    }
+
+    .about-values .section-h2 {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-card {
+      padding: 32px;
+      text-align: center;
+    }
+
+    .value-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .value-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.65;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CONTACT PAGE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .contact-layout {
+      background: var(--cream);
+      padding: 100px 80px;
+    }
+
+    @media (max-width: 767px) {
+      .contact-layout {
+        padding: 60px 24px;
+      }
+    }
+
+    .contact-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-left, .contact-right {
+      display: flex;
+    }
+
+    .contact-left .glass-card, .contact-right .glass-card {
+      width: 100%;
+      padding: 40px;
+    }
+
+    .contact-info-divider {
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 24px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .contact-info-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .whatsapp-btn {
+      width: 100%;
+      height: 52px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 24px 0;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ba954;
+      transform: translateY(-2px);
+    }
+
+    .contact-next-steps {
+      margin: 32px 0;
+      padding: 24px;
+      background: rgba(201,168,76,0.06);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .contact-next-steps h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .steps-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .step-mini {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .step-number-mini {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .step-mini p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--grey);
+      margin: 0;
+    }
+
+    .social-icons-contact {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .social-icon-contact {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(26,60,46,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icon-contact:hover {
+      background: var(--gold);
+      color: var(--green);
+      border-color: var(--gold);
+      transform: scale(1.08);
+    }
+
+    /* Contact Form */
+    .contact-form-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .contact-form-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      margin-bottom: 24px;
+    }
+
+    .contact-success {
+      text-align: center;
+      animation: scaleIn 0.3s ease;
+    }
+
+    .success-icon {
+      font-size: 48px;
+      color: var(--green);
+      margin-bottom: 16px;
+      animation: scaleIn 0.3s ease;
+    }
+
+    .contact-success h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .contact-success p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .contact-whatsapp-alt {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--cream-dark);
+      text-align: center;
+    }
+
+    .contact-whatsapp-alt p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      margin: 0;
+    }
+
+    .contact-whatsapp-alt a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-whatsapp-alt a:hover {
+      text-decoration: underline;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* MOBILE BOTTOM NAV */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #mobileBottomNav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: var(--cream);
+      border-top: 1px solid var(--cream-dark);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 997;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    @media (max-width: 767px) {
+      #mobileBottomNav {
+        display: flex;
+      }
+    }
+
+    .bottom-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 64px;
+      height: 64px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      color: var(--grey);
+    }
+
+    .bottom-nav-item.active {
+      color: var(--green);
+    }
+
+    .bottom-nav-icon {
+      font-size: 22px;
+      height: 22px;
+      width: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bottom-nav-center {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: 56px;
+      height: 56px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      font-size: 24px;
+      box-shadow: 0 8px 32px rgba(26,60,46,0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .bottom-nav-center:active {
+      transform: translate(-50%, 50%) scale(0.95);
+    }
+
+    .bottom-nav-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      margin-top: 4px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* GLOBAL MODAL */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #globalModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10,10,10,0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1001;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #globalModal.active {
+      display: flex;
+      animation: fadeSlideUp 0.3s ease;
+    }
+
+    .modal-content {
+      background: var(--cream);
+      border-top: 4px solid var(--gold);
+      border-radius: 20px;
+      max-width: 540px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      animation: scaleIn 0.3s ease;
+    }
+
+    @media (max-width: 640px) {
+      .modal-content {
+        padding: 32px 24px;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--green);
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .modal-close:hover {
+      color: var(--gold);
+    }
+
+    .modal-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .modal-subheading {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--grey);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      background: var(--cream-mid);
+      border: 1px solid var(--cream-dark);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-size: 16px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--black);
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(26,60,46,0.12);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 96px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231A3C2E' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+    }
+
+    .modal-submit {
+      width: 100%;
+      height: 52px;
+      background: var(--green);
+      color: var(--cream);
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .modal-submit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+      animation: shimmerGold 1s ease-in-out;
+    }
+
+    .modal-submit:hover {
+      background: var(--green-mid);
+    }
+
+    .modal-success {
+      text-align: center;
+      animation: scaleIn 0.3s ease;
+    }
+
+    .modal-success-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .modal-whatsapp-alt {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .modal-whatsapp-alt a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--gold);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .modal-whatsapp-alt a:hover {
+      text-decoration: underline;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CUSTOM CURSOR */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (min-width: 768px) {
+      .cursor-dot {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: var(--gold);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10000;
+        box-shadow: 0 0 6px rgba(201,168,76,0.6);
+      }
+
+      .cursor-ring {
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.6;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- ANNOUNCEMENT BAR -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div id="announcementBar">
+    <span id="announcementText">🏠 Professional Property Maintenance & Management — Ipswich & Beyond</span>
+    <div class="close-btn" onclick="closeAnnouncement()">✕</div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- HEADER -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <header>
+    <img id="siteLogo" src="logo.png" alt="PROPVIA SOLUTIONS LTD" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'">
+    <div class="logo-fallback">PROPVIA</div>
+
+    <nav class="nav-desktop">
+      <span class="nav-link" data-page="home" onclick="showPage('home')">Home</span>
+      <span class="nav-link" data-page="property" onclick="showPage('property')">Property Services</span>
+      <span class="nav-link" data-page="consultancy" onclick="showPage('consultancy')">Consultancy</span>
+      <span class="nav-link" data-page="about" onclick="showPage('about')">About</span>
+      <span class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</span>
+    </nav>
+
+    <button class="cta-btn" onclick="openModal()">Request Consultation</button>
+
+    <button class="hamburger-btn" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- MOBILE MENU -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()">✕</button>
+    <div class="mobile-menu-links">
+      <a onclick="showPage('home'); toggleMobileMenu()">Home</a>
+      <a onclick="showPage('property'); toggleMobileMenu()">Property Services</a>
+      <a onclick="showPage('consultancy'); toggleMobileMenu()">Consultancy</a>
+      <a onclick="showPage('about'); toggleMobileMenu()">About</a>
+      <a onclick="showPage('contact'); toggleMobileMenu()">Contact</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div>📧 Propviasolutions@gmail.com</div>
+      <div>📱 +44 7365 338565</div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- MAIN CONTENT -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <main>
+    <section class="page" id="home" style="display: block;">
+      
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 1: HERO -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="hero-section">
+        <!-- Background Elements Desktop -->
+        <div class="hero-bg">
+          <div class="hero-bg-circle-1"></div>
+          <div class="hero-bg-circle-2"></div>
+          <div class="hero-bg-grid"></div>
+          <div class="hero-bg-blob-1"></div>
+          <div class="hero-bg-blob-2"></div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-left">
+            <div class="hero-eyebrow reveal" style="animation-delay: 0.2s;">
+              🇬🇧 UK REGISTERED · IPSWICH, ENGLAND · NO. 17044310
+            </div>
+
+            <h1 class="hero-h1">
+              <span class="word-reveal" style="animation-delay: 0.08s;">Professional</span>
+              <span class="word-reveal" style="animation-delay: 0.16s;">Property</span>
+              <span class="word-reveal" style="animation-delay: 0.24s;">Management</span>
+              <span class="word-reveal gold-word" style="animation-delay: 0.32s;">&</span>
+              <span class="word-reveal gold-word" style="animation-delay: 0.40s;">Business</span>
+              <span class="word-reveal" style="animation-delay: 0.48s;">Support</span>
+              <span class="word-reveal" style="animation-delay: 0.56s;">Solutions</span>
+            </h1>
+
+            <div class="hero-divider reveal" style="animation-delay: 0.9s;"></div>
+
+            <p class="hero-sub reveal" style="animation-delay: 1.0s;">
+              PROPVIA SOLUTIONS LTD provides professional property maintenance, property management, consultancy, and operational support services for businesses and individuals in the property sector across the UK.
+            </p>
+
+            <div class="hero-buttons">
+              <button class="btn-primary reveal" style="animation-delay: 1.2s;" onclick="openModal()">
+                Request Consultation →
+              </button>
+              <button class="btn-secondary reveal" style="animation-delay: 1.35s;" onclick="showPage('property')">
+                View Our Services
+              </button>
+              <a href="https://wa.me/447365338565" target="_blank" class="btn-tertiary reveal" style="animation-delay: 1.5s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+
+            <div class="hero-trust reveal" style="animation-delay: 1.7s;">
+              <span>🏛️ Company No. 17044310</span>
+              <span>📍 Ipswich, England</span>
+              <span>✅ Fully Professional Service</span>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-cards-container">
+              <div class="hero-card hero-card-1">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                  <path d="M5 35 L20 15 L35 35 Z" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                  <rect x="8" y="20" width="24" height="15" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                  <circle cx="20" cy="25" r="3" fill="#C9A84C"/>
+                  <line x1="22" y1="8" x2="34" y2="20" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="34" cy="20" r="2" fill="#C9A84C"/>
+                  <circle cx="22" cy="8" r="2" fill="#C9A84C"/>
+                </svg>
+                <h3>Property Maintenance</h3>
+                <p>Residential & Commercial</p>
+                <div class="card-shimmer"></div>
+              </div>
+
+              <div class="hero-card hero-card-2">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                  <rect x="5" y="8" width="30" height="28" rx="2" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                  <line x1="15" y1="8" x2="15" y2="36" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                  <line x1="25" y1="8" x2="25" y2="36" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                  <line x1="5" y1="16" x2="35" y2="16" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                  <line x1="5" y1="24" x2="35" y2="24" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                  <circle cx="32" cy="30" r="4" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+                  <path d="M30 30 L34 30 M32 28 L32 32" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <h3>Property Management</h3>
+                <p>Professional Oversight</p>
+                <div class="card-checks">✓ ✓ ✓</div>
+              </div>
+
+              <div class="hero-card hero-card-3">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                  <path d="M8 12 L8 28 Q8 32 12 32 L28 32 Q32 32 32 28 L32 12 Q32 8 28 8 L12 8 Q8 8 8 12 Z" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+                  <line x1="12" y1="16" x2="28" y2="16" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
+                  <line x1="12" y1="22" x2="28" y2="22" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
+                  <line x1="12" y1="28" x2="28" y2="28" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
+                </svg>
+                <div class="card-counter">
+                  <span class="counter" data-target="100" data-suffix="+">0+</span>
+                </div>
+                <p>Businesses Supported</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 2: TRUST MARQUEE -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="trust-marquee">
+        <div class="marquee-content">
+          <span>Property Maintenance</span> · <span>Property Management</span> · <span>Business Consultancy</span> · <span>Project Support</span> · <span>Growth Support</span> · <span>Documentation Assistance</span> · <span>Ipswich, England</span> · <span>UK Registered</span> · <span>Company No. 17044310</span> · <span>Operational Excellence</span> · <span>Professional Services</span> ●
+          <span>Property Maintenance</span> · <span>Property Management</span> · <span>Business Consultancy</span> · <span>Project Support</span> · <span>Growth Support</span> · <span>Documentation Assistance</span> · <span>Ipswich, England</span> · <span>UK Registered</span> · <span>Company No. 17044310</span> · <span>Operational Excellence</span> · <span>Professional Services</span> ●
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 3: COMPANY INTRODUCTION -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="company-intro">
+        <div class="company-intro-container">
+          <div class="company-intro-left">
+            <div class="eyebrow reveal">WHO WE ARE</div>
+            <h2 class="section-h2 reveal d1">A Trusted Partner for Property & Business Success</h2>
+            <p class="section-body reveal d2">
+              PROPVIA SOLUTIONS LTD is a UK-registered professional services company based in Ipswich, England. We specialise in providing reliable property maintenance, management support, and business consultancy services to property owners, landlords, and businesses operating in the property sector.
+            </p>
+            <p class="section-body reveal d3">
+              Our approach is built on trust, efficiency, and clear communication. Whether you need ongoing property support, project coordination, or strategic consultancy guidance, PROPVIA SOLUTIONS LTD delivers professional results.
+            </p>
+            <a class="section-link reveal d4" onclick="showPage('about')">About Our Company →</a>
+          </div>
+
+          <div class="company-intro-right">
+            <div class="stats-grid">
+              <div class="stat-card glass-card reveal d1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <div class="counter" data-target="100" data-suffix="+">0</div>
+                <p>Businesses Supported</p>
+              </div>
+
+              <div class="stat-card glass-card reveal d2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <div class="counter" data-target="5" data-suffix="+">0</div>
+                <p>Core Service Areas</p>
+              </div>
+
+              <div class="stat-card glass-card reveal d3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <div class="counter" data-target="100" data-suffix="%">0</div>
+                <p>Client-Focused</p>
+              </div>
+
+              <div class="stat-card glass-card reveal d4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div class="counter" data-target="24" data-suffix="/7">0</div>
+                <p>Support Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 4: PROPERTY SERVICES OVERVIEW -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="services-overview">
+        <div class="services-header">
+          <div class="eyebrow reveal">WHAT WE OFFER</div>
+          <h2 class="section-h2 reveal d1" style="color: var(--cream);">Our Property & Business Services</h2>
+          <p class="section-sub reveal d2">Professional support solutions built for the property sector</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal d1">
+            <div class="service-icon-wrapper">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M5 35 L20 15 L35 35 Z" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                <rect x="8" y="20" width="24" height="15" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                <circle cx="20" cy="25" r="3" fill="#C9A84C"/>
+                <line x1="22" y1="8" x2="34" y2="20" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="34" cy="20" r="2" fill="#C9A84C"/>
+                <circle cx="22" cy="8" r="2" fill="#C9A84C"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Property Maintenance</h3>
+            <div class="service-divider"></div>
+            <p class="service-desc">Professional maintenance solutions for residential and commercial properties.</p>
+            <ul class="service-features">
+              <li>General Property Maintenance & Repairs</li>
+              <li>Repair Coordination & Scheduling</li>
+              <li>Routine Property Inspection Support</li>
+              <li>Ongoing Property Upkeep Management</li>
+              <li>Maintenance Scheduling & Planning</li>
+            </ul>
+            <a class="service-link">Learn More →</a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal d2">
+            <div class="service-icon-wrapper">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect x="5" y="8" width="30" height="28" rx="2" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                <line x1="15" y1="8" x2="15" y2="36" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <line x1="25" y1="8" x2="25" y2="36" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <line x1="5" y1="16" x2="35" y2="16" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <line x1="5" y1="24" x2="35" y2="24" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <circle cx="32" cy="30" r="4" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+                <path d="M30 30 L34 30 M32 28 L32 32" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Property Management Support</h3>
+            <div class="service-divider"></div>
+            <p class="service-desc">Reliable management assistance for property owners and landlords.</p>
+            <ul class="service-features">
+              <li>Tenant Coordination Assistance</li>
+              <li>Property Oversight & Monitoring</li>
+              <li>Operational Management Assistance</li>
+              <li>Maintenance Follow-Up Support</li>
+              <li>Property Administration Support</li>
+            </ul>
+            <a class="service-link">Learn More →</a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal d3">
+            <div class="service-icon-wrapper">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect x="6" y="4" width="20" height="28" rx="2" ry="3" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                <rect x="8" y="2" width="16" height="3" fill="#C9A84C" opacity="0.8"/>
+                <line x1="10" y1="10" x2="24" y2="10" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <line x1="10" y1="16" x2="24" y2="16" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <line x1="10" y1="22" x2="24" y2="22" stroke="#FAF7F2" stroke-width="1" opacity="0.5"/>
+                <path d="M26 26 L32 32 M30 26 L30 32 L26 32" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Property Project Support</h3>
+            <div class="service-divider"></div>
+            <p class="service-desc">Professional support for property projects and operational activities.</p>
+            <ul class="service-features">
+              <li>Project Coordination & Planning</li>
+              <li>Vendor & Contractor Communication</li>
+              <li>Operational Project Support</li>
+              <li>Site Assistance Coordination</li>
+              <li>Project Management Support</li>
+            </ul>
+            <a class="service-link">Learn More →</a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card reveal d4">
+            <div class="service-icon-wrapper">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="16" cy="20" r="10" fill="none" stroke="#FAF7F2" stroke-width="1.5" opacity="0.8"/>
+                <g fill="#FAF7F2" opacity="0.8">
+                  <polygon points="16,8 19,14 26,14 21,18 23,25 16,21 9,25 11,18 6,14 13,14"/>
+                </g>
+                <rect x="24" y="22" width="12" height="10" rx="1" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+                <line x1="26" y1="26" x2="34" y2="26" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
+                <line x1="26" y1="30" x2="34" y2="30" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Business Support Services</h3>
+            <div class="service-divider"></div>
+            <p class="service-desc">Helping property-related businesses improve efficiency and operations.</p>
+            <ul class="service-features">
+              <li>Business Operations Support</li>
+              <li>Administrative Assistance</li>
+              <li>Business File Coordination</li>
+              <li>Internal Process Documentation</li>
+              <li>Workflow Organisation Support</li>
+            </ul>
+            <a class="service-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="services-cta">
+          <button class="btn-secondary-outline" onclick="showPage('property')">View All Property Services →</button>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 5: CONSULTANCY HIGHLIGHT -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="consultancy-highlight">
+        <div class="consultancy-container">
+          <div class="consultancy-left">
+            <div class="consultancy-card reveal">
+              <svg class="consultancy-graphic" width="160" height="160" viewBox="0 0 160 160" fill="none">
+                <circle cx="80" cy="80" r="70" stroke="#C9A84C" stroke-width="1.5" opacity="0.3"/>
+                <rect x="20" y="120" width="15" height="40" fill="#C9A84C" opacity="0.8"/>
+                <rect x="40" y="100" width="15" height="60" fill="#C9A84C" opacity="0.9"/>
+                <rect x="60" y="80" width="15" height="80" fill="#C9A84C"/>
+                <circle cx="67.5" cy="75" r="3" fill="#C9A84C"/>
+                <line x1="15" y1="120" x2="145" y2="120" stroke="#C9A84C" stroke-width="2"/>
+              </svg>
+              <h3>Business Consultancy for the Property Sector</h3>
+              <p>
+                PROPVIA SOLUTIONS LTD provides strategic business consultancy and operational guidance for companies and individuals in the property sector. From startup support to process improvement — we help your business grow professionally.
+              </p>
+              <button class="btn-primary" onclick="showPage('consultancy')">Explore Consultancy →</button>
+            </div>
+          </div>
+
+          <div class="consultancy-right">
+            <div class="pill-grid">
+              <div class="pill-card reveal d1">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">💼 Business Consultancy</div>
+                    <div class="pill-sub">Strategic guidance for operational improvements</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 3h-2v4H8V3H6"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="pill-card reveal d2">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">📊 Strategic Planning Support</div>
+                    <div class="pill-sub">Clear planning support for business goals</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <circle cx="19" cy="12" r="1"></circle>
+                    <circle cx="5" cy="12" r="1"></circle>
+                    <path d="M12 8v8"></path>
+                    <path d="M8 12h8"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="pill-card reveal d3">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">⚙️ Operational Consultancy</div>
+                    <div class="pill-sub">Review and improve day-to-day operations</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m6.08 0l4.24-4.24M1 12h6m6 0h6m-17.78 7.78l4.24-4.24m6.08 0l4.24 4.24"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="pill-card reveal d4">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">🚀 Business Expansion Guidance</div>
+                    <div class="pill-sub">Support for scaling your business professionally</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8 10 1 17"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="pill-card reveal d5">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">🌱 Startup Business Support</div>
+                    <div class="pill-sub">Practical guidance for new businesses</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <path d="M12 2c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2s-2-.9-2-2V4c0-1.1.9-2 2-2z"></path>
+                    <path d="M8 20c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path>
+                    <path d="M16 20c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="pill-card reveal d6">
+                <div class="pill-content">
+                  <div>
+                    <div class="pill-title">📋 Business Structure Guidance</div>
+                    <div class="pill-sub">Advice on structuring your operations</div>
+                  </div>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 6: WHY CHOOSE US -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="why-choose">
+        <div class="why-choose-header">
+          <div class="eyebrow reveal">WHY PROPVIA</div>
+          <h2 class="section-h2 reveal d1">Built on Trust, Delivered with Expertise</h2>
+          <p class="section-sub reveal d2">What sets PROPVIA SOLUTIONS LTD apart</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card glass-card reveal d1">
+            <div class="why-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>UK Registered Company</h3>
+            <p>Fully registered with Companies House — No. 17044310. A professionally established and accountable UK business.</p>
+          </div>
+
+          <div class="why-card glass-card reveal d2">
+            <div class="why-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <h3>Professional & Reliable</h3>
+            <p>We deliver professional services with consistent reliability, clear communication, and full accountability.</p>
+          </div>
+
+          <div class="why-card glass-card reveal d3">
+            <div class="why-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                <line x1="4" y1="19" x2="20" y2="19"></line>
+                <polyline points="10 5 14 3 18 5 18 9 14 11 10 9 10 5"></polyline>
+              </svg>
+            </div>
+            <h3>Tailored Solutions</h3>
+            <p>Every client receives support aligned to their specific property and business requirements — no generic approach.</p>
+          </div>
+
+          <div class="why-card glass-card reveal d4">
+            <div class="why-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3>Dedicated Support</h3>
+            <p>We stay accessible throughout every project. WhatsApp, email, or phone — we are always available.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 7: HOW WE WORK -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="how-we-work">
+        <div class="how-header">
+          <h2 class="section-h2 reveal" style="color: var(--cream);">Our Simple Process</h2>
+          <p class="section-sub reveal d1">From first contact to delivered results</p>
+        </div>
+
+        <div class="steps-container">
+          <div class="steps-line"></div>
+
+          <div class="step reveal d1">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Initial Consultation</h3>
+            <p class="step-body">Contact us by phone, email, or WhatsApp. We discuss your requirements with no obligation whatsoever.</p>
+          </div>
+
+          <div class="step reveal d2">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Assessment & Proposal</h3>
+            <p class="step-body">We assess your needs and provide a clear, tailored proposal covering the right support services for you.</p>
+          </div>
+
+          <div class="step reveal d3">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Service Delivery</h3>
+            <p class="step-body">Our team delivers professionally, efficiently, and with full transparency throughout.</p>
+          </div>
+
+          <div class="step reveal d4">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Ongoing Support</h3>
+            <p class="step-body">We remain available for continued support, follow-up, and any additional consultancy needs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <!-- SECTION 8: FINAL CTA BANNER -->
+      <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+      <section class="final-cta">
+        <div class="final-cta-bg"></div>
+        <div class="final-cta-content">
+          <h2 class="reveal">Ready to Discuss Your Requirements?</h2>
+          <p class="reveal d1">Book a free initial consultation with our team today. No obligation — just professional guidance tailored to your needs.</p>
+          <div class="final-cta-buttons reveal d2">
+            <button class="btn-primary" onclick="openModal()">Request Consultation →</button>
+            <button class="btn-secondary" onclick="showPage('property')">View Our Services</button>
+            <a href="https://wa.me/447365338565" target="_blank" class="btn-tertiary">💬 WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="page" id="property" style="display: none;">
+      <!-- PROPERTY SERVICES MINI HERO -->
+      <section class="page-hero page-hero-green">
+        <div class="page-hero-bg">
+          <div class="page-hero-ring"></div>
+          <div class="page-hero-grid"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Home</span> › <span>Property Services</span>
+          </div>
+          <div class="eyebrow reveal">OUR SERVICES</div>
+          <h1 class="page-h1 reveal d1">Property Services</h1>
+          <p class="page-sub reveal d2">
+            Professional property maintenance, management, and project support solutions for property owners and businesses across the UK.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES GRID -->
+      <section class="services-page-grid">
+        <!-- Card 1: Property Maintenance -->
+        <div class="service-page-card reveal" style="animation-delay: 0s;">
+          <div class="service-card-header">
+            <div class="service-card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M4 30 L24 8 L44 30 Z" stroke="#1A3C2E" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                <path d="M8 30 L8 18 L40 18 L40 30" stroke="#1A3C2E" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                <circle cx="24" cy="24" r="3" fill="#C9A84C"/>
+                <line x1="30" y1="8" x2="38" y2="16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+                <path d="M32 6 a3 3 0 0 1 4 4" stroke="#C9A84C" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <button class="service-card-cta" onclick="openModal()">Request Service →</button>
+          </div>
+          <h3 class="service-card-title">Property Maintenance</h3>
+          <div class="service-card-divider"></div>
+          <p class="service-card-desc">Professional maintenance solutions for residential and commercial properties. We coordinate repairs, upkeep, and routine maintenance to keep your property in excellent condition.</p>
+          <ul class="service-card-features">
+            <li>General Property Maintenance & Repairs</li>
+            <li>Repair Coordination & Scheduling</li>
+            <li>Routine Property Inspection Support</li>
+            <li>Ongoing Property Upkeep Management</li>
+            <li>Maintenance Planning & Scheduling</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Property Management Support -->
+        <div class="service-page-card reveal" style="animation-delay: 0.14s;">
+          <div class="service-card-header">
+            <div class="service-card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <rect x="4" y="16" width="40" height="28" stroke="#1A3C2E" stroke-width="2" fill="none"/>
+                <rect x="8" y="20" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <rect x="18" y="20" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <rect x="28" y="20" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <rect x="8" y="30" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <rect x="18" y="30" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <rect x="28" y="30" width="6" height="6" fill="#1A3C2E" opacity="0.3"/>
+                <circle cx="38" cy="10" r="3" fill="none" stroke="#C9A84C" stroke-width="2"/>
+                <line x1="38" y1="13" x2="38" y2="22" stroke="#C9A84C" stroke-width="2"/>
+                <path d="M35 19 L41 19 M35 23 L41 23" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <button class="service-card-cta" onclick="openModal()">Get Support →</button>
+          </div>
+          <h3 class="service-card-title">Property Management Support</h3>
+          <div class="service-card-divider"></div>
+          <p class="service-card-desc">Reliable management assistance for property owners and landlords. We provide operational and administrative support to manage your properties professionally and efficiently.</p>
+          <ul class="service-card-features">
+            <li>Tenant Coordination Assistance</li>
+            <li>Property Oversight & Monitoring</li>
+            <li>Operational Management Assistance</li>
+            <li>Maintenance Follow-Up Support</li>
+            <li>Property Administration Support</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Property Project Support -->
+        <div class="service-page-card reveal" style="animation-delay: 0.28s;">
+          <div class="service-card-header">
+            <div class="service-card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M10 6 L38 6 Q40 6 40 8 L40 44 Q40 46 38 46 L10 46 Q8 46 8 44 L8 8 Q8 6 10 6 Z" stroke="#1A3C2E" stroke-width="2" fill="none"/>
+                <rect x="18" y="2" width="12" height="4" fill="#C9A84C"/>
+                <line x1="15" y1="18" x2="33" y2="18" stroke="#1A3C2E" stroke-width="1.5" opacity="0.5"/>
+                <line x1="15" y1="25" x2="33" y2="25" stroke="#1A3C2E" stroke-width="1.5" opacity="0.5"/>
+                <line x1="15" y1="32" x2="25" y2="32" stroke="#1A3C2E" stroke-width="1.5" opacity="0.5"/>
+                <line x1="30" y1="35" x2="38" y2="35" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+                <path d="M34 31 L38 35 L34 39" stroke="#C9A84C" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <button class="service-card-cta" onclick="openModal()">Book Consultation →</button>
+          </div>
+          <h3 class="service-card-title">Property Project Support</h3>
+          <div class="service-card-divider"></div>
+          <p class="service-card-desc">Professional support for ongoing property projects and operational activities. We help coordinate, communicate, and manage every aspect of your property projects.</p>
+          <ul class="service-card-features">
+            <li>Project Coordination & Planning</li>
+            <li>Vendor & Contractor Communication</li>
+            <li>Operational Project Support</li>
+            <li>On-Site Assistance Coordination</li>
+            <li>Project Management Support</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Business Support Services -->
+        <div class="service-page-card reveal" style="animation-delay: 0.42s;">
+          <div class="service-card-header">
+            <div class="service-card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="20" cy="24" r="8" stroke="#1A3C2E" stroke-width="2" fill="none"/>
+                <rect x="12" y="17" width="3" height="3" fill="#1A3C2E"/>
+                <rect x="12" y="28" width="3" height="3" fill="#1A3C2E"/>
+                <rect x="28" y="17" width="3" height="3" fill="#1A3C2E"/>
+                <rect x="28" y="28" width="3" height="3" fill="#1A3C2E"/>
+                <rect x="30" y="14" width="12" height="20" stroke="#C9A84C" stroke-width="2" fill="none" rx="1"/>
+                <line x1="33" y1="20" x2="39" y2="20" stroke="#C9A84C" stroke-width="1.5"/>
+                <line x1="33" y1="25" x2="39" y2="25" stroke="#C9A84C" stroke-width="1.5"/>
+                <line x1="33" y1="30" x2="37" y2="30" stroke="#C9A84C" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <button class="service-card-cta" onclick="openModal()">Get Quote →</button>
+          </div>
+          <h3 class="service-card-title">Business Support Services</h3>
+          <div class="service-card-divider"></div>
+          <p class="service-card-desc">Helping property-related businesses improve efficiency, administration, and operations. We provide practical business support to keep your operations running smoothly.</p>
+          <ul class="service-card-features">
+            <li>Business Operations Support</li>
+            <li>Administrative Assistance & Coordination</li>
+            <li>Business File & Records Coordination</li>
+            <li>Internal Process Documentation</li>
+            <li>Workflow Organisation Support</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA -->
+      <section class="page-bottom-cta page-bottom-cta-green">
+        <h3>Need a Specific Property Service?</h3>
+        <p>Free initial consultation — no obligation.</p>
+        <div class="page-bottom-buttons">
+          <button class="btn-primary" onclick="openModal()">Request Consultation →</button>
+          <a href="https://wa.me/447365338565" target="_blank" class="btn-secondary">WhatsApp Us</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="consultancy" style="display: none;">
+      <!-- CONSULTANCY MINI HERO -->
+      <section class="page-hero page-hero-cream">
+        <div class="page-hero-bg-cream">
+          <div class="page-hero-circle-cream"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Home</span> › <span>Consultancy</span>
+          </div>
+          <div class="eyebrow" style="color: var(--green);">CONSULTANCY</div>
+          <h1 class="page-h1" style="color: var(--green); animation-delay: 0.1s;" class="reveal d1">Business Consultancy Solutions</h1>
+          <p class="page-sub" style="color: var(--grey); animation-delay: 0.2s;" class="reveal d2">
+            Professional consultancy services for businesses and individuals in the property sector. Focused on operations, growth, and success.
+          </p>
+        </div>
+      </section>
+
+      <!-- COMPLIANCE NOTICE -->
+      <section class="consultancy-compliance">
+        <div class="compliance-box">
+          <p>ℹ️ PROPVIA SOLUTIONS LTD provides operational business support and consultancy only. We do not offer investment advice, financial lending, loan services, or interest-based financial products of any kind.</p>
+        </div>
+      </section>
+
+      <!-- CONSULTANCY CARDS -->
+      <section class="consultancy-cards-section">
+        <!-- Card 1 -->
+        <div class="consultancy-card reveal d1">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="10" r="5" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <path d="M9 20 Q9 15 16 15 Q23 15 23 20 L23 26 Q23 27 22 27 L10 27 Q9 27 9 26 Z" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <circle cx="16" cy="8" r="2" fill="#C9A84C"/>
+              <path d="M14 6 L18 6 M16 4 L16 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Business Consultancy</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>Strategic consultancy focused on helping your company improve operations, performance, and long-term business direction.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="consultancy-card reveal d2">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <circle cx="16" cy="16" r="8" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <circle cx="16" cy="16" r="4" fill="#C9A84C"/>
+            </svg>
+          </div>
+          <h3>Strategic Planning Support</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>Structured planning support to help businesses set clear goals and build actionable strategies to achieve them.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="consultancy-card reveal d3">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="10" cy="16" r="5" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <circle cx="22" cy="16" r="5" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+              <line x1="15" y1="13" x2="17" y2="15" stroke="#1A3C2E" stroke-width="1"/>
+              <line x1="15" y1="19" x2="17" y2="17" stroke="#1A3C2E" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3>Operational Consultancy</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>We review your business operations and provide clear, practical guidance to improve efficiency and day-to-day performance.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="consultancy-card reveal d4">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="12" y="12" width="8" height="8" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <line x1="16" y1="8" x2="16" y2="4" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+              <line x1="16" y1="28" x2="16" y2="24" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+              <line x1="28" y1="16" x2="24" y2="16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="16" x2="4" y2="16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Business Expansion Guidance</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>Professional support for businesses planning to grow, scale, or expand operations, reach, or service offering.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="consultancy-card reveal d5">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4 L18 10 L24 11 L20 15 L21 21 L16 18 L11 21 L12 15 L8 11 L14 10 Z" fill="#C9A84C" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Startup Business Support</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>Practical guidance for entrepreneurs and new businesses getting started with the right structure and support.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="consultancy-card reveal d6">
+          <div class="consultancy-card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M6 20 L6 12 L16 4 L26 12 L26 20" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <rect x="12" y="16" width="8" height="8" stroke="#1A3C2E" stroke-width="1.5" fill="none"/>
+              <circle cx="22" cy="10" r="5" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+              <line x1="25" y1="13" x2="28" y2="16" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Property Sector Consultancy</h3>
+          <div class="consultancy-card-divider"></div>
+          <p>Specialist consultancy for businesses and individuals working within the UK property sector.</p>
+          <a class="consultancy-link" onclick="openModal()">Get Support →</a>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="consultancy-why">
+        <h2>Why Choose Our Consultancy?</h2>
+        <div class="consultancy-why-grid">
+          <div class="consultancy-why-card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 3h-2v4H8V3H6"></path>
+            </svg>
+            <h3>Property-Focused</h3>
+            <p>Sector-specific operational understanding</p>
+          </div>
+          <div class="consultancy-why-card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <h3>Practical Guidance</h3>
+            <p>Actionable, not theoretical advice</p>
+          </div>
+          <div class="consultancy-why-card">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h3>Fully Compliant</h3>
+            <p>Ethical, professional, UK-standard services</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA -->
+      <section class="page-bottom-cta page-bottom-cta-green">
+        <h3>Ready to Improve Your Business?</h3>
+        <p>Start with a free consultancy discussion.</p>
+        <div class="page-bottom-buttons">
+          <button class="btn-primary" onclick="openModal()">Request Consultation →</button>
+          <a href="https://wa.me/447365338565" target="_blank" class="btn-secondary">WhatsApp Us</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="about" style="display: none;">
+      <!-- ABOUT MINI HERO -->
+      <section class="page-hero page-hero-green">
+        <div class="page-hero-bg">
+          <div class="page-hero-ring"></div>
+          <div class="page-hero-grid"></div>
+        </div>
+        <div class="page-hero-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Home</span> › <span>About</span>
+          </div>
+          <div class="eyebrow reveal">ABOUT US</div>
+          <h1 class="page-h1 reveal d1">About PROPVIA SOLUTIONS LTD</h1>
+          <p class="page-sub reveal d2">
+            A UK-registered professional services company providing property and business support to the UK market.
+          </p>
+        </div>
+      </section>
+
+      <!-- MISSION SECTION -->
+      <section class="about-mission">
+        <div class="about-mission-container">
+          <div class="about-mission-left">
+            <div class="eyebrow reveal">OUR MISSION</div>
+            <h2 class="section-h2 reveal d1">Building Professional Property Support Across the UK</h2>
+            <p class="section-body reveal d2">
+              PROPVIA SOLUTIONS LTD was established to provide reliable, professional support services to property owners, landlords, and businesses in the property sector. We believe that professional guidance and operational support are essential for success.
+            </p>
+            <p class="section-body reveal d3">
+              Our mission is to deliver trustworthy, efficient, and transparent services that help our clients manage properties effectively, improve business operations, and achieve their professional goals.
+            </p>
+            <a class="section-link reveal d4" onclick="showPage('contact')">Get in Touch →</a>
+          </div>
+          <div class="about-mission-right">
+            <div class="stats-grid">
+              <div class="stat-card glass-card reveal d1">
+                <div class="counter" data-target="100" data-suffix="+">0</div>
+                <p>Businesses Supported</p>
+              </div>
+              <div class="stat-card glass-card reveal d2">
+                <div class="counter" data-target="5" data-suffix="+">0</div>
+                <p>Core Services</p>
+              </div>
+              <div class="stat-card glass-card reveal d3">
+                <div class="counter" data-target="100" data-suffix="%">0</div>
+                <p>UK-Based</p>
+              </div>
+              <div class="stat-card glass-card reveal d4">
+                <div class="counter" data-target="24" data-suffix="/7">0</div>
+                <p>Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DO -->
+      <section class="about-what-we-do">
+        <div class="about-what-header">
+          <h2 class="section-h2 reveal" style="color: var(--cream);">What We Do</h2>
+          <p class="section-sub reveal d1" style="color: var(--cream-mid);">Our core areas of professional support</p>
+        </div>
+        <div class="about-pillars">
+          <div class="about-pillar-card glass-card reveal d1">
+            <div class="pillar-icon">🏠</div>
+            <h3>Property Services</h3>
+            <p>Professional maintenance, management, and project support for residential and commercial properties across the UK.</p>
+          </div>
+          <div class="about-pillar-card glass-card reveal d2">
+            <div class="pillar-icon">💼</div>
+            <h3>Business Consultancy</h3>
+            <p>Strategic guidance, operational support, and business consultancy for companies and individuals in the property sector.</p>
+          </div>
+          <div class="about-pillar-card glass-card reveal d3">
+            <div class="pillar-icon">🤝</div>
+            <h3>Ongoing Support</h3>
+            <p>Dedicated, professional support available via WhatsApp, email, and phone — always there when you need us.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPANY DETAILS CARD -->
+      <section class="about-details">
+        <div class="details-card glass-card">
+          <img id="about-logo" src="logo.png" alt="PROPVIA SOLUTIONS LTD" style="height: 40px; width: auto; margin-bottom: 24px;">
+          <div class="details-divider"></div>
+          <div class="details-grid">
+            <div class="detail-item">
+              <div class="detail-label">Company Name</div>
+              <div class="detail-value">PROPVIA SOLUTIONS LTD</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Company Number</div>
+              <div class="detail-value">17044310</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Registered Address</div>
+              <div class="detail-value">50 Princes Street, Ipswich, IP1 1RJ, England</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Email</div>
+              <div class="detail-value">Propviasolutions@gmail.com</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Phone</div>
+              <div class="detail-value">+44 7365 338565</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Registered In</div>
+              <div class="detail-value">England & Wales</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUES SECTION -->
+      <section class="about-values">
+        <h2 class="section-h2 reveal">Our Values</h2>
+        <div class="values-grid">
+          <div class="value-card glass-card reveal d1">
+            <div class="value-icon">🛡️</div>
+            <h3>Trustworthy</h3>
+            <p>Professional, reliable, and fully accountable in every engagement.</p>
+          </div>
+          <div class="value-card glass-card reveal d2">
+            <div class="value-icon">⚡</div>
+            <h3>Efficient</h3>
+            <p>Delivering results quickly without compromising on quality.</p>
+          </div>
+          <div class="value-card glass-card reveal d3">
+            <div class="value-icon">📋</div>
+            <h3>Transparent</h3>
+            <p>Clear communication and honest guidance throughout our work.</p>
+          </div>
+          <div class="value-card glass-card reveal d4">
+            <div class="value-icon">🎯</div>
+            <h3>Results-Driven</h3>
+            <p>Focused on delivering measurable outcomes for our clients.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA -->
+      <section class="page-bottom-cta page-bottom-cta-green">
+        <h3>Ready to Work Together?</h3>
+        <p>Contact our team to discuss your requirements.</p>
+        <div class="page-bottom-buttons">
+          <button class="btn-primary" onclick="openModal()">Request Consultation →</button>
+          <a href="https://wa.me/447365338565" target="_blank" class="btn-secondary">WhatsApp Us</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="contact" style="display: none;">
+      <!-- CONTACT MINI HERO -->
+      <section class="page-hero page-hero-gold">
+        <div class="page-hero-content">
+          <div class="breadcrumb" style="color: var(--green-mid);">
+            <span onclick="showPage('home')">Home</span> › <span>Contact</span>
+          </div>
+          <div class="eyebrow" style="color: var(--green-mid);">GET IN TOUCH</div>
+          <h1 class="page-h1" style="color: var(--green);">Contact Us</h1>
+          <p class="page-sub" style="color: var(--green);">
+            Have questions? We're here to help. Reach out via phone, email, WhatsApp, or fill out the form below.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT LAYOUT -->
+      <section class="contact-layout">
+        <div class="contact-container">
+          <!-- LEFT: Contact Info -->
+          <div class="contact-left">
+            <div class="glass-card">
+              <img id="contact-logo" src="logo.png" alt="PROPVIA SOLUTIONS LTD" style="height: 48px; width: auto; margin-bottom: 24px;">
+              <div class="contact-info-divider"></div>
+              
+              <div class="contact-info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                  <div class="contact-label">Address</div>
+                  <div class="contact-value">50 Princes Street, Ipswich, IP1 1RJ, England</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">Propviasolutions@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-value">+44 7365 338565</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A3C2E" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+                <div>
+                  <div class="contact-label">Company Number</div>
+                  <div class="contact-value">17044310</div>
+                </div>
+              </div>
+
+              <button class="whatsapp-btn" onclick="window.open('https://wa.me/447365338565', '_blank')">
+                💬 WhatsApp Us
+              </button>
+
+              <div class="contact-next-steps">
+                <h4>What Happens Next?</h4>
+                <div class="steps-mini">
+                  <div class="step-mini">
+                    <div class="step-number-mini">01</div>
+                    <p>Submit inquiry or WhatsApp us</p>
+                  </div>
+                  <div class="step-mini">
+                    <div class="step-number-mini">02</div>
+                    <p>We review your requirements</p>
+                  </div>
+                  <div class="step-mini">
+                    <div class="step-number-mini">03</div>
+                    <p>Free consultation within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-icons-contact">
+                <a href="#" target="_blank" title="Facebook" class="social-icon-contact">f</a>
+                <a href="#" target="_blank" title="Instagram" class="social-icon-contact">📷</a>
+                <a href="#" target="_blank" title="LinkedIn" class="social-icon-contact">in</a>
+                <a href="#" target="_blank" title="Twitter" class="social-icon-contact">𝕏</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Contact Form -->
+          <div class="contact-right">
+            <div class="glass-card" style="border-top: 4px solid var(--gold);">
+              <h3 class="contact-form-title">Send Us a Message</h3>
+              <p class="contact-form-sub">We respond to all enquiries within 24 hours.</p>
+
+              <form id="contactForm" onsubmit="submitContactForm(event)">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-input" name="fullName" placeholder="Your full name" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-input" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-input" name="phone" placeholder="07xxx xxxxxx or +44...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Service *</label>
+                  <select class="form-select" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="property-maintenance">Property Maintenance</option>
+                    <option value="property-management">Property Management Support</option>
+                    <option value="property-project">Property Project Support</option>
+                    <option value="business-support">Business Support Services</option>
+                    <option value="consultancy">Business Consultancy</option>
+                    <option value="general">General Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-textarea" name="message" placeholder="Tell us about your requirements..." rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="modal-submit" style="width: 100%; margin-top: 12px;">Submit Inquiry →</button>
+              </form>
+
+              <div id="contactSuccess" class="contact-success" style="display: none;">
+                <div class="success-icon">✅</div>
+                <h4>Thank you!</h4>
+                <p>We'll be in touch within 24 hours.</p>
+                <p style="font-size: 13px; color: var(--grey); margin-top: 8px;">Our team will review your inquiry and respond promptly.</p>
+              </div>
+
+              <div class="contact-whatsapp-alt">
+                <p>Prefer WhatsApp? <a href="https://wa.me/447365338565" target="_blank">Message us directly →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- MOBILE BOTTOM NAV -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <nav id="mobileBottomNav">
+    <div class="bottom-nav-item" data-page="home" onclick="showPage('home')">
+      <div class="bottom-nav-icon">🏠</div>
+      <div class="bottom-nav-label">Home</div>
+    </div>
+
+    <div class="bottom-nav-item" data-page="property" onclick="showPage('property')">
+      <div class="bottom-nav-icon">🏢</div>
+      <div class="bottom-nav-label">Services</div>
+    </div>
+
+    <div class="bottom-nav-center" onclick="openModal()">
+      ☎️
+    </div>
+
+    <div class="bottom-nav-item" data-page="about" onclick="showPage('about')">
+      <div class="bottom-nav-icon">ℹ️</div>
+      <div class="bottom-nav-label">About</div>
+    </div>
+
+    <div class="bottom-nav-item" data-page="contact" onclick="showPage('contact')">
+      <div class="bottom-nav-icon">✉️</div>
+      <div class="bottom-nav-label">Contact</div>
+    </div>
+  </nav>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FOOTER -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <footer>
+    <div class="footer-grid">
+      <!-- Column 1: Logo & Tagline -->
+      <div class="footer-col">
+        <img id="footerLogo" class="footer-logo" src="logo.png" alt="PROPVIA SOLUTIONS LTD">
+        <div class="footer-tagline">Professional Property & Consultancy Solutions</div>
+        <p class="footer-text">
+          PROPVIA SOLUTIONS LTD provides professional property maintenance, management, and consultancy support services across the property sector.
+        </p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <a class="footer-link" onclick="showPage('home')">Home</a>
+        <a class="footer-link" onclick="showPage('property')">Property Services</a>
+        <a class="footer-link" onclick="showPage('consultancy')">Consultancy</a>
+        <a class="footer-link" onclick="showPage('about')">About</a>
+        <a class="footer-link" onclick="showPage('contact')">Contact</a>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="footer-col">
+        <h3>Services</h3>
+        <a class="footer-link">Property Maintenance</a>
+        <a class="footer-link">Property Management</a>
+        <a class="footer-link">Project Support</a>
+        <a class="footer-link">Business Support</a>
+        <a class="footer-link">Consultancy</a>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <div class="footer-contact-item">
+          <span>📍</span>
+          <span>50 Princes Street, Ipswich, IP1 1RJ</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>📧</span>
+          <span>Propviasolutions@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>📱</span>
+          <span>+44 7365 338565</span>
+        </div>
+        <button class="footer-whatsapp-btn" onclick="window.open('https://wa.me/447365338565', '_blank')">
+          💬 WhatsApp Us
+        </button>
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <div style="text-align: center;">
+        <a class="social-icon" href="#" title="Facebook">f</a>
+        <div class="social-label">Facebook</div>
+      </div>
+      <div style="text-align: center;">
+        <a class="social-icon" href="#" title="Instagram">📷</a>
+        <div class="social-label">Instagram</div>
+      </div>
+      <div style="text-align: center;">
+        <a class="social-icon" href="#" title="LinkedIn">in</a>
+        <div class="social-label">LinkedIn</div>
+      </div>
+      <div style="text-align: center;">
+        <a class="social-icon" href="#" title="Twitter">𝕏</a>
+        <div class="social-label">Twitter</div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      © 2025 PROPVIA SOLUTIONS LTD · Company No. 17044310 · Registered in England & Wales · 
+      <a href="#">Privacy Policy</a> · <a href="#">Terms</a>
+    </div>
+  </footer>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- GLOBAL MODAL -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div id="globalModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <form id="inquiryForm" onsubmit="submitInquiry(event)">
+        <h2 class="modal-heading">Request a Free Consultation</h2>
+        <p class="modal-subheading">Tell us about your property or business requirements.</p>
+
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-input" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-input" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Service *</label>
+          <select class="form-select" name="service" required>
+            <option value="">Select a service</option>
+            <option value="property-maintenance">Property Maintenance</option>
+            <option value="property-management">Property Management Support</option>
+            <option value="project-support">Property Project Support</option>
+            <option value="business-support">Business Support Services</option>
+            <option value="consultancy">Business Consultancy</option>
+            <option value="general">General Enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="modal-submit">Submit Inquiry →</button>
+      </form>
+
+      <div class="modal-whatsapp-alt">
+        <a href="https://wa.me/447365338565" target="_blank">Or WhatsApp us directly →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- CUSTOM CURSOR (Desktop) -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- JAVASCRIPT -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <script>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SCROLL REVEAL */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function observeReveals() {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+    
+    observeReveals();
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* COUNTER ANIMATION */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function animateCounters() {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          const target = +el.dataset.target;
+          const suffix = el.dataset.suffix || '';
+          const dur = 2000;
+          const start = performance.now();
+          
+          function update(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const ease = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(ease * target) + suffix;
+            if (p < 1) requestAnimationFrame(update);
+          }
+          
+          requestAnimationFrame(update);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      
+      document.querySelectorAll('.counter').forEach(el => io.observe(el));
+    }
+    
+    animateCounters();
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* PAGE ROUTING */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => {
+        p.style.display = 'none';
+      });
+      
+      document.getElementById(id).style.display = 'block';
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      document.querySelectorAll('.nav-link').forEach(l => {
+        l.classList.remove('active');
+      });
+      document.querySelectorAll('.bottom-nav-item').forEach(l => {
+        l.classList.remove('active');
+      });
+      
+      const activeNav = document.querySelector(`[data-page="${id}"]`);
+      if (activeNav) activeNav.classList.add('active');
+      
+      observeReveals();
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* MODAL MANAGEMENT */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function openModal() {
+      const modal = document.getElementById('globalModal');
+      modal.style.display = 'flex';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('globalModal');
+      modal.style.display = 'none';
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      resetForm();
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'globalModal') {
+        closeModal();
+      }
+    }
+
+    function resetForm() {
+      const form = document.getElementById('inquiryForm');
+      form.style.display = 'block';
+      form.reset();
+    }
+
+    function submitInquiry(e) {
+      e.preventDefault();
+      
+      const form = document.getElementById('inquiryForm');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      console.log('Inquiry submitted:', data);
+      
+      form.style.display = 'none';
+      
+      const successMsg = document.createElement('div');
+      successMsg.className = 'modal-success';
+      successMsg.innerHTML = '<p class="modal-success-text">✅ Thank you! We\'ll be in touch within 24 hours.</p>';
+      
+      const modalContent = document.querySelector('.modal-content');
+      const closeBtn = modalContent.querySelector('.modal-close');
+      const whatsappAlt = modalContent.querySelector('.modal-whatsapp-alt');
+      
+      closeBtn.parentNode.insertBefore(successMsg, closeBtn.nextSibling);
+      whatsappAlt.style.display = 'none';
+      
+      setTimeout(() => {
+        closeModal();
+      }, 3000);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* HAMBURGER MENU */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+      
+      if (menu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SCROLL HEADER */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ANNOUNCEMENT BAR ROTATION */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    const announcements = [
+      '🏠 Professional Property Maintenance & Management — Ipswich & Beyond',
+      '📋 Business Consultancy & Growth Support for Property Sector',
+      '📞 Free Consultation — +44 7365 338565 or WhatsApp Us'
+    ];
+
+    let currentAnnouncement = 0;
+
+    function rotateAnnouncement() {
+      currentAnnouncement = (currentAnnouncement + 1) % announcements.length;
+      const announcementText = document.getElementById('announcementText');
+      announcementText.textContent = announcements[currentAnnouncement];
+    }
+
+    setInterval(rotateAnnouncement, 4000);
+
+    function closeAnnouncement() {
+      document.getElementById('announcementBar').style.display = 'none';
+      document.querySelector('header').style.top = '0';
+      document.querySelector('main').style.marginTop = '80px';
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CUSTOM CURSOR */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    let mouseX = 0;
+    let mouseY = 0;
+    let ringX = 0;
+    let ringY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      if (window.innerWidth < 768) return;
+      
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (cursorDot) {
+        cursorDot.style.left = (mouseX - 4) + 'px';
+        cursorDot.style.top = (mouseY - 4) + 'px';
+      }
+
+      if (cursorRing) {
+        ringX += (mouseX - ringX - 16) * 0.12;
+        ringY += (mouseY - ringY - 16) * 0.12;
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+      }
+    });
+
+    document.addEventListener('mouseenter', () => {
+      if (cursorDot) cursorDot.style.opacity = '1';
+      if (cursorRing) cursorRing.style.opacity = '1';
+    });
+
+    document.addEventListener('mouseleave', () => {
+      if (cursorDot) cursorDot.style.opacity = '0';
+      if (cursorRing) cursorRing.style.opacity = '0';
+    });
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* INITIAL PAGE STATE */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    document.querySelector('[data-page="home"]').classList.add('active');
+    const bottomHome = document.querySelector('.bottom-nav-item[data-page="home"]');
+    if (bottomHome) bottomHome.classList.add('active');
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* HERO CARD 3D TILT */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    const heroCardsContainer = document.querySelector('.hero-cards-container');
+    if (heroCardsContainer) {
+      heroCardsContainer.style.perspective = '800px';
+      
+      document.addEventListener('mousemove', (e) => {
+        if (window.innerWidth < 1024) return;
+        
+        const rect = heroCardsContainer.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        const rotateX = ((e.clientY - centerY) / (rect.height / 2)) * 5;
+        const rotateY = ((e.clientX - centerX) / (rect.width / 2)) * -5;
+        
+        heroCardsContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      
+      document.addEventListener('mouseleave', () => {
+        heroCardsContainer.style.transform = 'rotateX(0) rotateY(0)';
+      });
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* SERVICE CARD LINKS */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    document.querySelectorAll('.service-link').forEach(link => {
+      link.addEventListener('click', () => showPage('property'));
+    });
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* PILL CARD CLICK HANDLING */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    document.querySelectorAll('.pill-card').forEach(pill => {
+      pill.addEventListener('click', () => showPage('consultancy'));
+    });
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* CONTACT FORM SUBMISSION */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    function submitContactForm(e) {
+      e.preventDefault();
+      
+      const form = document.getElementById('contactForm');
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      console.log('Contact form submitted:', data);
+      
+      form.style.display = 'none';
+      
+      const successBox = document.getElementById('contactSuccess');
+      successBox.style.display = 'block';
+      
+      setTimeout(() => {
+        form.style.display = 'block';
+        successBox.style.display = 'none';
+        form.reset();
+      }, 4000);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* IMAGE ONERROR FALLBACK */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    const allLogos = document.querySelectorAll('img[src="logo.png"]');
+    allLogos.forEach(logo => {
+      logo.onerror = function() {
+        this.style.display = 'none';
+        const fallback = this.nextElementSibling;
+        if (fallback && fallback.classList.contains('logo-fallback')) {
+          fallback.style.display = 'block';
+        }
+      };
+    });
+  </script>
+</body>
+</html>
